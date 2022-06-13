@@ -6,7 +6,7 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]);
 
-  if(request.text!==null) {
+  if(request.text!=null) {
     this.res.writeHead(200);
     postMessage(request.text);
     this.res.end();
